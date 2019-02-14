@@ -111,3 +111,9 @@ WHERE ASSOCIATEID = &AID;
 DBMS_OUTPUT.PUT_LINE(AID||' '||FNAME||' '||LNAME);
 END;
 ________________________________________________________________________________
+DECLARE ASSOCIATEROW ASSOCIATE%ROWTYPE;
+BEGIN SELECT * INTO ASSOCIATEROW FROM ASSOCIATE
+WHERE ASSOCIATEID = &AID;
+DBMS_OUTPUT.PUT_LINE(ASSOCIATEROW.ASSOCIATEID);
+END;
+________________________________________________________________________________
