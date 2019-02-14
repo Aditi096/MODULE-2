@@ -89,3 +89,25 @@ WHERE A.ASSOCIATEID = B.ASSOCIATEID;
 SELECT * FROM ASSOCIATEBANKDETAILS;
 DESC ASSOCIATEBANKDETAILS;
 ________________________________________________________________________________________________
+SET SERVEROUTPUT ON
+BEGIN
+DBMS_OUTPUT.PUT_LINE("WELCOME")
+END;
+______________________________________________________________________________
+DECLARE VENAME VARCHAR2(20) NOT NULL:= 'PATIT';
+ID NUMBER;
+BEGIN
+VENAME := 'PATIT';
+DBMS_OUTPUT.PUT_LINE(VENAME||''||ID);
+END;
+______________________________________________________________________________
+DECLARE 
+AID NUMBER;
+FNAME VARCHAR2(30);
+LNAME VARCHAR2(30);
+BEGIN 
+SELECT ASSOCIATEID, FIRSTNAME,LASTNAME INTO AID, FNAME,LNAME FROM ASSOCIATE
+WHERE ASSOCIATEID = &AID;
+DBMS_OUTPUT.PUT_LINE(AID||' '||FNAME||' '||LNAME);
+END;
+________________________________________________________________________________
